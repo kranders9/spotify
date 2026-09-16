@@ -3,3 +3,7 @@
 *.json
 *.exe
 __pycache__/
+src/
+license.txt
+md5sums
+stats.txt
