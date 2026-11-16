@@ -65,6 +65,19 @@ La conexión a Power BI se hace mediante el conector nativo
 **MongoDB Atlas SQL**, disponible en Power BI Desktop bajo
 "Obtener datos > Base de datos".
 
+## Base de datos local (MySQL)
+
+Para iniciar el contenedor definido en `docker-compose.yml`, configura la
+variable `MYSQL_ROOT_PASSWORD` en el entorno y ejecuta:
+
+```
+docker compose up -d
+```
+
+El servicio crea la base de datos `spotify_db` y publica MySQL en el puerto
+`3306`. El archivo `salida_limpia.csv` debe estar en la raíz del proyecto
+para que Docker lo monte en el contenedor.
+
 ## Requisitos
 
 ```

@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: spotify_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Define MYSQL_ROOT_PASSWORD in your environment}
+      MYSQL_DATABASE: spotify_db
+    ports:
+      - "3306:3306"
+    volumes:
+      # Esto mapea CSV local a una carpeta segura dentro del contenedor
+      - ./salida_limpia.csv:/var/lib/mysql-files/salida_limpia.csv
